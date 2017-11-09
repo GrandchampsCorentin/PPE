@@ -3,7 +3,7 @@
 <div class = "col-md-6">
 <h1>Saisie des frais </h1>
 
-<form>
+<form action="Controleurs/gestionSaisie.php" method="get">
 <table class="table table-striped">
     <thead>
       <tr>
