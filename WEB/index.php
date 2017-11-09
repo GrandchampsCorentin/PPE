@@ -18,6 +18,8 @@ case 'inscription' :
     {include("vues/inscription.php");break;}
 case 'accueil' :
     {echo "Vous êtes connecté";break;}
+case 'saisie':
+	{include("vues/saisieFrais.php");break;}
 }
 
 
