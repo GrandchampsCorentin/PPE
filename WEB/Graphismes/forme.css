@@ -1,0 +1,32 @@
+#entete{
+    margin:0;
+    padding:0;
+    z-index:1000;
+
+    background-image: url("../Graphismes/banderole2.jpg");
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+}
+
+#menu{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 220px;
+    z-index:1001;
+}
+
+#contenu{
+    top:-150px;
+    z-index:1001;
+}
+
+.contenu2{
+    top:-70px;
+    z-index:1001;
+}
+
+#logo{
+    position: relative;
+    left: 35%;
+    z-index:1001;
+}
