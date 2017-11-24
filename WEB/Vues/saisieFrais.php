@@ -1,6 +1,4 @@
-<div class="card offset-1 col-10 bg-light contenu2 pt-2 pb-3">
-<div class ="row">
-<div class = "col-md-6">
+
 <h1>Saisie des frais </h1>
 
 <form action="index.php?uc=gestionSaisie&action=saisie" method="post">
@@ -36,6 +34,5 @@
   </table>
   <input type="submit" name="valider" value = "valider">
   </form>
-</div>
-</div>
-</div>
+
+

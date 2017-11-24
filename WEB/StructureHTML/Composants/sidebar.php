@@ -1,7 +1,7 @@
 <!-- Composant du menu de navigation du site -->
 
 <span class="col-3">
-    <div class="card mt-2 px-3 pt-2">
+    <div class="card mt-2 px-2 pt-2">
         <h4 class="card-title text-center">Menu de navigation</h4>
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><a href="index.php?uc=accueil">Accueil</a></li>
@@ -24,11 +24,11 @@
                         }*/
                     }
                     else
-                        echo '<li class="list-group-item"><a href="index.php?uc=connexion&action=afficheConnexion">Connexion</a></li>';     
+                        echo '<li class="list-group-item"><a href="index.php?uc=connexion&action=afficheConnexion&typeC=form">Connexion</a></li>';     
                         
                 }
                 else
-                    echo '<li class="list-group-item"><a href="index.php?uc=connexion&action=afficheConnexion">Connexion</a></li>';
+                    echo '<li class="list-group-item"><a href="index.php?uc=connexion&action=afficheConnexion&typeC=form">Connexion</a></li>';
             ?>  
         </ul>
     </div>

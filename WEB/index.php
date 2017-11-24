@@ -1,5 +1,5 @@
 <!-- Classe container de bootstrap 4 -->
-<div class="container">
+<div class="container h-100 bg-dark">
     
     <?php 
         /*  Contient les composants :

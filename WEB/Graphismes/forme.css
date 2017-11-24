@@ -1,7 +1,4 @@
 #entete{
-    margin:0;
-    padding:0;
-    z-index:1000;
 
     background-image: url("../Graphismes/banderole2.jpg");
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
@@ -15,18 +12,15 @@
     z-index:1001;
 }
 
-#contenu{
-    top:-150px;
-    z-index:1001;
+.decalageVerticalArticles{
+    margin-top: -20px;
 }
 
-.contenu2{
-    top:-70px;
-    z-index:1001;
+#margeEntete{
+    margin-bottom: 100px;
 }
 
 #logo{
-    position: relative;
     left: 35%;
     z-index:1001;
 }
