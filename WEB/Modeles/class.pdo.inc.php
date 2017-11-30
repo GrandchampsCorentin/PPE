@@ -5,7 +5,7 @@ Classe d'accès aux données.
 */
 class PdoFredi
 {
-	private static $pdo;
+	private static $monPdo;
 	private static $pdoFredi = null;
 	
 	/**
@@ -13,12 +13,12 @@ class PdoFredi
 	*/
 	private function __construct()
 	{
-		PdoFredi::$pdo = new PDO('mysql:host=172.15.205.1:81;dbname=fredi','root','root');
-		PdoFredi::$pdo->query("SET CHARACTER SET utf8");
+		PdoFredi::$monPdo = new PDO('mysql:host=localhost;dbname=fredi','root', '');
+		PdoFredi::$monPdo->query("SET CHARACTER SET utf8");
 	}
-	public function __destruct()
+	public function _destruct()
 	{
-		PdoFredi::$pdo = null;
+		PdoFredi::$monPdo = null;
 	}
 	
 	public static function getPdoFredi()
@@ -33,11 +33,46 @@ class PdoFredi
 	public function getFrais()
 	{
 		$req ="Select * from lignefrais, demandeurs, motifs where demandeurs.mail = lignefrais.mail and lignefrais.idmotif = motifs.idmotif;";
-		$res = PdoFredi::$pdo -> query($req);
+		$res = PdoFredi::$monPdo -> query($req);
 		$lesLignes = $res -> fetchAll();
 		return $leslignes;
 	}
+
+	public function connexion($mail, $motPasse)
+	{
+				
+		$reqSQL="SELECT nom FROM demandeurs WHERE mail='$mail' AND mdp='$motPasse';";    
+		
+		$liste= PdoFredi::$monPdo->query($reqSQL);
+		$result = $liste->fetch();		   
+		return $result;
+	}
 	
+	public function inscriptionDemandeur($formDemandeur)
+	{
+		$retour = false;
+		//Mieux gérer les mots de passes !
+		if($formDemandeur[6] == $formDemandeur[7])
+		{
+			$reqSQL='INSERT INTO demandeurs VALUES (';
+			$reqSQL= $reqSQL."'".$formDemandeur[0]."','".$formDemandeur[1]."','".$formDemandeur[2]."','".$formDemandeur[3]."','".$formDemandeur[4]."','".$formDemandeur[5]."','".$formDemandeur[6]."','00');";
+			$test = PdoFredi::$monPdo->exec($reqSQL);
+			if($test)
+				$retour = true;
+
+		}
+		return $retour;
+	}
+
+	public function getLienAdherents($mail)
+	{
+		$reqSQL = "SELECT distinct numerolicence, mail FROM appartient WHERE mail='$mail'";
+		$liste = PdoFredi::$monPdo->query($reqSQL);
+		$result = $liste->fetch();
+
+		return $result;
+	}
+
 }
 
 ?>

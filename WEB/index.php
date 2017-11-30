@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    require_once("Modeles/class.pdo.inc.php");
+?>
+
 <!-- Classe container de bootstrap 4 -->
 <div class="container h-100 bg-dark">
     

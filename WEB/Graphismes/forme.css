@@ -5,11 +5,16 @@
     background-size: cover; /* version standardisée */
 }
 
-#menu{
-    margin-top: 20px;
-    margin-left: 20px;
-    height: 220px;
-    z-index:1001;
+.menus ul{display: none;}
+.menus:hover{background: lightgrey;}
+.menus:hover h4{text-decoration: underline;}
+.menus:hover h5{text-decoration: underline;}
+.menus:hover ul {display: block;}
+.menus li:hover{background: lightsalmon;}
+.menus a{display: block;}
+
+#boiteMessage{
+    margin-top : -70px;
 }
 
 .decalageVerticalArticles{

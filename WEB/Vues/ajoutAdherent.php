@@ -1,6 +1,7 @@
-<h2 class="card-header text-center">Inscription demandeur</h2>
 
-<form class="mt-2 mb-0" action="index.php?uc=inscription&action=inscription" method="post">
+<h2 class="card-header text-center">Nouvel Adherent</h2>
+
+<form class="mt-2 mb-0" action="" method="post">
     <div class="form-row">
         <div class="col">
             <label  for="nomDemandeur">Nom : </label>
